@@ -1,0 +1,43 @@
+// PLACE FOR  GENERAL SCSS STYLES
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body__bg-color;
+  color: $body__color;
+  margin: $body__margin;
+  padding: $body__padding;
+  font-family: $body__font-family;
+  font-size: $body__font-size;
+  font-weight: $body__font-weight;
+  line-height: $body__line-height;
+  text-align: $body__text-align;
+}
+
+a {
+  background-color: $link__bg-color;
+  text-decoration: $link__text-decoration;
+  margin: $link__margin;
+  padding: $link__padding;
+  color: $link__color;
+
+  &:hover {
+    color: $link-hover__color;
+    text-decoration: $link-hover__text-decoration;
+    outline: $link-hover__outline;
+  }
+  &:focus {
+    outline: $link-focus__outline;
+  }
+  &:active {
+    outline: $link-active__outline;
+  }
+}
+
+p {
+  margin-bottom: $paragraph__margin-bottom;
+}

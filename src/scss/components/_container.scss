@@ -1,0 +1,45 @@
+@use '../base/functions';
+@use '../base/mixins';
+@use '../base/variables';
+
+
+%container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.container {
+  //@extend %container;
+
+  @each $breakpoint, $width in $container-max-widths {
+    @include device-up($breakpoint, $grid-breakpoints) {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: $width;
+      padding-right: 1vw;
+      padding-left: 1vw;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+
+  @each $breakpoint, $width in $container-max-widths {
+    &-#{$breakpoint} {
+      @extend %container;
+    }
+  }
+
+  &-fluid {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

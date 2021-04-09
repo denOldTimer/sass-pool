@@ -1,0 +1,39 @@
+$midnight: #191a1d !default;
+$concrete: #f2f2f2 !default;
+$mako: #444857 !default;
+$coral: #ff7f50 !default;
+$boston: #2a92bf !default;
+$fern: #00b961 !default;
+$crimson: #df2436 !default;
+$razzle: #f24bd6 !default;
+
+$brand-colors: () !default;
+$brand-colors: map-merge(
+  (
+    "midnight": $midnight,
+    "concrete": $concrete,
+    "mako": $mako,
+    "coral": $coral,
+    "boston": $boston,
+    "fern": $fern,
+    "crimson": $crimson,
+    "razzle": $razzle,
+  ),
+  $brand-colors
+);
+
+$baloo-two: "Baloo 2";
+$fira-code: "Fira Code";
+$montserrat: "Montserrat";
+$prompt: "Prompt";
+
+$brand-font-families: () !default;
+$brand-font-families: map-merge(
+  (
+    "Baloo 2": $baloo-two,
+    "Fira Code": $fira-code,
+    "Montserrat": $montserrat,
+    "Prompt": $prompt,
+  ),
+  $brand-font-families
+);
